@@ -1,0 +1,5 @@
+-r base.txt
+gunicorn  # Servidor WSGI para producción
+psycopg2-binary  # Para PostgreSQL
+django-storages  # Para almacenamiento en la nube
+whitenoise  # Para servir archivos estáticos 

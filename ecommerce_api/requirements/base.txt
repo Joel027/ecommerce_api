@@ -1,0 +1,6 @@
+django>=4.2
+djangorestframework
+django-simple-history
+Pillow  # Para el manejo de imágenes
+psycopg2-binary
+python-decouple  # Para manejar variables de entorno 

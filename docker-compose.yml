@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  # Servicio de Django
+  web:
+    build: 
+      context: ./ecommerce_api
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./ecommerce_api:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=ecommerce_api.settings.local
+      - DB_NAME=backend_dev12
+      - DB_USER=postgres
+      - DB_PASSWORD=272122
+      - DB_HOST=db
+      - DB_PORT=5432
+    depends_on:
+      - db
+
+  # Servicio de PostgreSQL
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=backend_dev12
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=272122
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data: 

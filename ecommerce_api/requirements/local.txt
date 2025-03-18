@@ -1,0 +1,5 @@
+-r base.txt
+django-debug-toolbar  # Para debugging
+pytest  # Para testing
+pytest-django  # Para testing en Django
+coverage  # Para cobertura de código 

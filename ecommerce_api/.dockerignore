@@ -1,0 +1,53 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Entorno virtual
+venv_code/
+.env
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Base de datos
+*.sqlite3
+
+# Archivos de media y estáticos
+media/
+static/
+!static/.gitkeep
+
+# Logs
+*.log
+
+# Tests
+.coverage
+htmlcov/ 
